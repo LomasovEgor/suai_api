@@ -1,6 +1,7 @@
 import motor.motor_asyncio
+import os
 
-MONGODB_URL = 'mongodb://localhost:27017/'
+MONGODB_URL = os.environ['MONGODB_URL']
 
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGODB_URL)
 
